@@ -2,7 +2,33 @@
     box-sizing: border-box;
 }
 
+:root {
+    --side-bar-color: rgb(25,146,212);
+    --content-background-color: rgb(226,232,240);
+}
+
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) minmax(500px, 5fr);
+    grid-template-rows: minmax(100px, 1fr) minmax(400px, 4fr);
+}
+
+.sidebar {
+    background: var(--side-bar-color);
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    padding: max(20px, 10%);
+}
+
+.content{
+    background: var(--content-background-color);
 }
