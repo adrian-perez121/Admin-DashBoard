@@ -59,6 +59,7 @@ body {
 }
 
 .content {
+    z-index: 1;
     background: var(--content-background-color);
 }
 
@@ -75,3 +76,70 @@ body {
     width: 35px;
     height: auto;
 }
+
+.main-avatar {
+    border-radius: 50%;
+    background: yellow;
+}
+
+.header {
+    z-index: 2;
+    box-shadow: 0px 2px 5px -1px #a1a1a1;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.top {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(20, minmax(40px, 80px));
+    grid-template-rows: max(50px, 100%);
+    align-items: center;
+}
+
+.search-button {
+    grid-column: 1 / 2;
+}
+
+.search-button>button {
+    appearance: none;
+    height: 40px;
+    width: 40px;
+}
+
+.search-bar {
+    grid-column: 2 / 14;
+}
+
+form.search {
+    height: clamp(20px, 3vh, 40px);
+}
+
+input[type="search"] {
+    appearance: none;
+    outline: none;
+    border: none;
+    background: var(--content-background-color);
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.notif {
+    grid-column: 16 / 17;
+}
+
+.top .main-avatar {
+    grid-column: 17 / 18;
+    height: 50px;
+    width: 50px;
+}
+
+.top .name {
+    justify-self: center;
+    grid-column: 18 / 21;
+}
+
+
+
