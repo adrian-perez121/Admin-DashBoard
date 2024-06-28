@@ -79,7 +79,9 @@ body {
 
 .main-avatar {
     border-radius: 50%;
-    background: yellow;
+    background-image: url("./images/avatars/cat.jpg");
+    background-size: contain;
+    background-position: center;
 }
 
 .header {
@@ -104,8 +106,19 @@ body {
 
 .search-button>button {
     appearance: none;
+    border: none;
+    background: none;
+    border-radius: 50%;
     height: 40px;
     width: 40px;
+}
+
+.search-button>button:hover {
+    background: rgba(251, 248, 25, 0.54);
+}
+
+.search-button>button:active {
+    fill: var(--side-bar-color);
 }
 
 .search-bar {
@@ -126,6 +139,10 @@ input[type="search"] {
     border-radius: 15px;
 }
 
+input[type="search"]:focus {
+    box-shadow: 2px 3px 5px 1px #b6b6b6;
+}
+
 .notif {
     grid-column: 16 / 17;
 }
@@ -139,6 +156,7 @@ input[type="search"] {
 .top .name {
     justify-self: center;
     grid-column: 18 / 21;
+    font-weight: 600;
 }
 
 
